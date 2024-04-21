@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, width=device-width">
+
+  {% extends "layout.html" %}
+
+  {% block title %}
+  Index
+  {% endblock %}
+
+  {% block main %}
+  <table>
+    <thead>
+      <tr>
+        <th>Symbols</th>
+        <th>Shares</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in database %}
+      <tr>
+        <td>{{ row["symbol"] }}</td>
+        <td>{{ row["shares"] }}</td>
+        <td>{{ row ["price"] }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+    <tfoot>
+      <tr>
+        <td></td>
+        <td></td>
+        <th scope="1">Cash</th>
+        <th scope="1">{{ cash }}</th>
+        <th scope="2">Total</th>
+        <th scope="2">{{ total }}</th>
+      </tr>
+    </tfoot>
+  </table>
+  {% endblock %}

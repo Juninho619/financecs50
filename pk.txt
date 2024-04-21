@@ -1,0 +1,2 @@
+
+export API_KEY=pk_6e2e357af9294880adca0b8e97e667bc

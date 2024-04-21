@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+
+    {% extends "layout.html" %}
+
+    {% block title %}
+          Sell
+    {% endblock %}
+
+    {% block main %}
+    <h1>Sell</h1>
+         <form action="/sell" method="POST">
+            <div class="form-group">
+                <input autocomplete="off" autofocus class="form-control" name="symbol" placeholder="e.g.: NFLX" type="text" />
+            </div>
+            <div class="form-group">
+                <input autocomplete="off" autofocus class="form-control" name="shares" placeholder="e.g: 50%" type="number" />
+            </div>
+            <button class="btn btn-primary" type ="submit">Sell</button>
+         </form>
+    {% endblock %}
